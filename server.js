@@ -5,7 +5,16 @@ var http = require('http'),
 /* Global variables */
 var listingData, server;
 
-var requestHandler = function(request, response) {
+var requestHandler = function (request, response) {
+
+    /Creates the server
+    server = http.createServer(requestHandler);
+    //Start the server
+    server.listen(port, function () {
+        //once the server is listening, this callback function is executed
+        console.log('Server listening on: http://127.0.0.1:' + port);
+    });
+
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
