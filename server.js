@@ -8,14 +8,7 @@ var listingData, server;
 var requestHandler = function (request, response) {
     response.end('Request received from server.js!');
     //Creates the server
-    server = http.createServer(requestHandler);
-    //Start the server
-    server.listen(port, function () {
-        
-        //once the server is listening, this callback function is executed
-        console.log('Server listening on: http://127.0.0.1:' + port);
-    });
-
+   
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
@@ -40,6 +33,11 @@ var requestHandler = function (request, response) {
 
     */
 };
+
+ server = http.createServer(requestHandler);
+    //Start the server
+    server.listen(port, function () {
+
 
 fs.readFile('listings.json', 'utf8', function (err, data) {
     console.log('Server listening on: http://127.0.0.1:' + port);
