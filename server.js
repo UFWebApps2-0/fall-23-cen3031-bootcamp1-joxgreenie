@@ -7,10 +7,11 @@ var listingData, server;
 
 var requestHandler = function (request, response) {
 
-    /Creates the server
+    //Creates the server
     server = http.createServer(requestHandler);
     //Start the server
     server.listen(port, function () {
+        response.end('Request received from server.js!');
         //once the server is listening, this callback function is executed
         console.log('Server listening on: http://127.0.0.1:' + port);
     });
@@ -40,7 +41,8 @@ var requestHandler = function (request, response) {
     */
 };
 
-fs.readFile('listings.json', 'utf8', function(err, data) {
+fs.readFile('listings.json', 'utf8', function (err, data) {
+    console.log('Server listening on: http://127.0.0.1:' + port);
   /*
     This callback function should save the data in the listingData variable, 
     then start the server. 
