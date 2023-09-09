@@ -34,13 +34,10 @@ var requestHandler = function (request, response) {
     */
 };
 
- server = http.createServer(requestHandler);
-    //Start the server
-    server.listen(port, function () {
-
-
+ 
 fs.readFile('listings.json', 'utf8', function (err, data) {
-    console.log('Server listening on: http://127.0.0.1:' + port);
+
+    
   /*
     This callback function should save the data in the listingData variable, 
     then start the server. 
@@ -62,6 +59,12 @@ fs.readFile('listings.json', 'utf8', function (err, data) {
   
 
   //Creates the server
+    var server = http.createServer(requestHandler);
+
+    server.listen(port, function(){
+         console.log('Server listening on: http://127.0.0.1:' + port);
+    });
+   
   
   //Start the server
 
