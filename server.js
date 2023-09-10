@@ -7,7 +7,7 @@ var listingData, server;
 
 var requestHandler = function (request, response) {
     response.writeHead(200, { "Content-Type":"application/json" });
-    response.end('Request received from server.js! updated?');
+    response.end(JSON.stringify(listings.json));
    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
