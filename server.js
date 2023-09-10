@@ -5,13 +5,18 @@ var http = require('http'),
 /* Global variables */
 var listingData, server;
 
+
 var requestHandler = function (request, response) {
     response.writeHead(200, { "Content-Type":"application/json" });
     //var listingData = require('C:\Users\jorda\CEN3031\fall-23-cen3031-bootcamp1-joxgreenie\listings.json');
     //response.end(JSON.stringify(listings.json));
    // response.end(JSON.stringify(listingData));
   //  console.log(request.headers);
-
+    var url = require('url');
+    var address = 'http://localhost:8080/';
+    var q = url.parse(address, true);
+    console.log(q);
+    console.log(q.pathname);
     
     //response.end();
    
@@ -20,9 +25,8 @@ var requestHandler = function (request, response) {
    
   */
     //console.log(request);
-   const myRequest = new Request("flowers.jpg");
-    const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
-    console.log(myURL);
+ 
+  
 
 
    
