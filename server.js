@@ -13,7 +13,8 @@ var requestHandler = function (request, response) {
    // response.end(JSON.stringify(listingData));
   //  console.log(request.headers);
     var url = require('url');
-    var address = 'http://localhost:8080/';
+    //var address = 'http://localhost:8080/';
+    var address = 'localhost:8080/listings';
     var q = url.parse(address, true);
     console.log(q);
     console.log(q.pathname);
