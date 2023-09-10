@@ -11,8 +11,7 @@ var requestHandler = function (request, response) {
     //response.end(JSON.stringify(listings.json));
    // response.end(JSON.stringify(listingData));
 
-    var url_parsed = url.parse(request.url);
-    console.log(url_parsed);
+    console.log(request.headers);
 
     
     response.end();
