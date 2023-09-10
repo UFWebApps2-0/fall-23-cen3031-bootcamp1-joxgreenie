@@ -6,7 +6,7 @@ var http = require('http'),
 var listingData, server;
 
 var requestHandler = function (request, response) {
-    response.writeHead(200);
+    response.writeHead(200, { "Content-Type":"application/json" });
     response.end('Request received from server.js! updated?');
    
   /*Investigate the request object. 
