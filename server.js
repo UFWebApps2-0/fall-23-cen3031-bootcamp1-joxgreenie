@@ -18,8 +18,11 @@ var requestHandler = function (request, response) {
     var q = url.parse(address, true);
     console.log(q);
     console.log(q.pathname);
+
+    var keyName1=request.body.key;
+    console.log("KEY NAME 1" + keyName1);
     
-    response.end();
+    response.end("ugh");
    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
