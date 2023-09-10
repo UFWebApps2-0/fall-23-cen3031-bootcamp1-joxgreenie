@@ -10,9 +10,6 @@ var requestHandler = function (request, response) {
     //var listingData = require('C:\Users\jorda\CEN3031\fall-23-cen3031-bootcamp1-joxgreenie\listings.json');
     //response.end(JSON.stringify(listings.json));
    // response.end(JSON.stringify(listingData));
-
-    import url from 'node:url';
-    const myURL = url.parse('https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash');
   //  console.log(request.headers);
 
     
