@@ -22,6 +22,7 @@ var requestHandler = function (request, response) {
     //console.log(request);
    const myRequest = new Request("flowers.jpg");
     const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
+    console.log(myURL);
 
 
    
