@@ -23,8 +23,8 @@ var requestHandler = function (request, response) {
 
    console.log(request.body);*/
 
-    new URL(request.url, `http://${request.headers.host}`);
-    console.log(URL.href);
+    new URL(request.url, http://localhost:8080/);
+    console.log(URL);
     //console.log(URL);
     
     response.end("ugh");
@@ -34,12 +34,6 @@ var requestHandler = function (request, response) {
    
   */
     //console.log(request);
- 
-  
-
-
-   
-
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
     is sent to the '/listings' path. Otherwise, it should send a 404 error. 
