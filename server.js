@@ -12,7 +12,7 @@ var requestHandler = function (request, response) {
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
-  //console.log(request);
+    console.log(request);
 
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
