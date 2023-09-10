@@ -13,13 +13,20 @@ var requestHandler = function (request, response) {
   //  console.log(request.headers);
 
     
-    response.end();
+    //response.end();
    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
    
   */
-    console.log(request);
+    //console.log(request);
+    app.get('/page', (req, res, next) => {
+    // Show some content to the user
+    let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+})
+
+    console.log(fullUrl);
+
    
 
   /*
