@@ -7,7 +7,8 @@ var listingData, server;
 
 var requestHandler = function (request, response) {
     response.writeHead(200, { "Content-Type":"application/json" });
-    response.end(JSON.stringify(listings.json));
+    //response.end(JSON.stringify(listings.json));
+    response.end(JSON.stringify(listingData));
    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
