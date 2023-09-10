@@ -12,6 +12,8 @@ var requestHandler = function (request, response) {
     //response.end(JSON.stringify(listings.json));
    // response.end(JSON.stringify(listingData));
   //  console.log(request.headers);
+
+    /*
     var url = require('url');
     //var address = 'http://localhost:8080/';
     var address = 'localhost:8080/listings';
@@ -19,7 +21,10 @@ var requestHandler = function (request, response) {
     console.log(q);
     console.log(q.pathname);
 
-   console.log(request.body);
+   console.log(request.body);*/
+
+    new URL(request.url, `http://${request.headers.host}`);
+    console.log(URL);
     
     response.end("ugh");
    
