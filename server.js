@@ -6,13 +6,13 @@ var http = require('http'),
 var listingData, server;
 
 var requestHandler = function (request, response) {
-    response.end('Request received from server.js!');
-    //Creates the server
+    response.writeHead(200);
+    response.end('Request received from server.js! updated?');
    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
-    console.log(request);
+    //console.log(request);
 
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
