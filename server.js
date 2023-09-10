@@ -19,8 +19,7 @@ var requestHandler = function (request, response) {
     console.log(q);
     console.log(q.pathname);
 
-    var keyName1=request.body.key;
-    console.log("KEY NAME 1" + keyName1);
+   console.log(request.body);
     
     response.end("ugh");
    
