@@ -20,12 +20,8 @@ var requestHandler = function (request, response) {
    
   */
     //console.log(request);
-    app.get('/page', (req, res, next) => {
-    // Show some content to the user
-    let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-})
-
-    console.log(fullUrl);
+    var myURL = request.url;
+    console.log(myURL);
 
    
 
