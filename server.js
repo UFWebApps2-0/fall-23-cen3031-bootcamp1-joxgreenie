@@ -47,7 +47,13 @@ var requestHandler = function (request, response) {
 
  
 fs.readFile('listings.json', 'utf8', function (err, data) {
+    fs.readFile('"C:\Users\jorda\CEN3031\fall-23-cen3031-bootcamp1-joxgreenie\listings.json"', handleFile)
 
+
+    function handleFile(err, data) {
+        if (err) throw err
+        obj = JSON.parse(data)
+   }
     
   /*
     This callback function should save the data in the listingData variable, 
