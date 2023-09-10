@@ -18,7 +18,7 @@ var requestHandler = function (request, response) {
     console.log(q);
     console.log(q.pathname);
     
-    //response.end();
+    response.end();
    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
