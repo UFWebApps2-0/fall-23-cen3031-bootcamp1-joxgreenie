@@ -19,7 +19,7 @@ var requestHandler = function (request, response) {
     console.log(method);
     
     const jsonContent = JSON.stringify(listingData);
-    res.end(jsonContent);
+    response.end(jsonContent);
     
     //console.log(request);
   /*
