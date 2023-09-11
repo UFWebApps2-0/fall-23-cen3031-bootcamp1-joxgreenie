@@ -21,10 +21,12 @@ var requestHandler = function (request, response) {
     if(method == "GET" && urlVar == "/listings"){
         fs.readFile('listings.json', 'utf8', function(err, data){
             // Display the file content
-            console.log(data);
+            //console.log(data);
+            listingData += data;
         });
         console.log('readFile called');
-        response.end("[insert json here]");
+        response.end(JSON.stringify(listingData));
+       // response.end("[insert json here]");
     }else{
         response.statusCode = 404; 
         response.end("Error 404: oopsie, page not found");
