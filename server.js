@@ -28,14 +28,13 @@ var requestHandler = function (request, response) {
     //console.log(URL);
     console.log(request.url);
     console.log(request.path);
-    console.log(request.method);
-    
-    response.end("ugh");
-   
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
    
   */
+
+    var method = request.method;
+    console.log(method);
     //console.log(request);
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
@@ -55,6 +54,8 @@ var requestHandler = function (request, response) {
     Helpful example: if-else structure- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
 
     */
+
+    response.end("ugh");
 };
 
  
