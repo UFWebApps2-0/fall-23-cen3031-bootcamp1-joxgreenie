@@ -25,16 +25,14 @@ var requestHandler = function (request, response) {
             listingData += data;
         });
         console.log('readFile called');
-        response.end(JSON.stringify(listingData));
+        response.end(listingData);
+        //response.end(JSON.stringify(listingData));
        // response.end("[insert json here]");
     }else{
         response.statusCode = 404; 
         response.end("Error 404: oopsie, page not found");
     }
- 
-   // const jsonContent = JSON.stringify(listingData);
-   // response.end(jsonContent);
- 
+  
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
     is sent to the '/listings' path. Otherwise, it should send a 404 error. 
