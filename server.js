@@ -7,13 +7,10 @@ const path = require('node:path');
 /* Global variables */
 var listingData, server;
 
-
 var requestHandler = function (request, response) {
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
-   
-    
     var urlVar = request.url;
     var method = request.method;
     
@@ -71,7 +68,9 @@ fs.readFile('listings.json', 'utf8', function (err, data) {
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw#throwing_an_existing_object
    */
   
-
+    if (err) {
+        throw err;
+    }
    //Save the data in the listingData variable already defined
       listingData += data;
 
