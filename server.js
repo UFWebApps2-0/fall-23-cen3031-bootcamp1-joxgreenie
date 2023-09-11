@@ -10,33 +10,17 @@ var listingData, server;
 
 var requestHandler = function (request, response) {
     response.writeHead(200, { "Content-Type":"application/json" });
-    //var listingData = require('C:\Users\jorda\CEN3031\fall-23-cen3031-bootcamp1-joxgreenie\listings.json');
-    //response.end(JSON.stringify(listings.json));
-   // response.end(JSON.stringify(listingData));
-  //  console.log(request.headers);
-
-    /*
-    var url = require('url');
-    //var address = 'http://localhost:8080/';
-    var address = 'localhost:8080/listings';
-    var q = url.parse(address, true);
-    console.log(q);
-    console.log(q.pathname);
-
-   console.log(request.body);*/
-
-   // new URL(request.url, `http://${request.headers.host}`); 
-    //console.log(URL);
-    //console.log(URL);
     console.log(request.url);
-  //  console.log(request.pathname);
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
    
   */
-
     var method = request.method;
     console.log(method);
+    
+    const jsonContent = JSON.stringify(listingData);
+    res.end(jsonContent);
+    
     //console.log(request);
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
