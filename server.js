@@ -17,6 +17,9 @@ var requestHandler = function (request, response) {
   */
     var method = request.method;
     console.log(method);
+
+    var path = request.path;
+    console.log(path);
     
     const jsonContent = JSON.stringify(listingData);
     response.end(jsonContent);
