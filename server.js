@@ -29,7 +29,7 @@ var requestHandler = function (request, response) {
     //console.log(URL);
     //console.log(URL);
     console.log(request.url);
-    console.log(request.pathname);
+  //  console.log(request.pathname);
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
    
