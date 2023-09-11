@@ -26,7 +26,7 @@ var requestHandler = function (request, response) {
    // new URL(request.url, `http://${request.headers.host}`); 
     //console.log(URL);
     //console.log(URL);
-    console.log(req.baseUrl);
+    console.log(request.url);
     
     response.end("ugh");
    
