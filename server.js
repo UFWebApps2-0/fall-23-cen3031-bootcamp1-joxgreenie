@@ -24,6 +24,7 @@ var requestHandler = function (request, response) {
         console.log('readFile called');
         response.end(listingData);
     }else{
+        response.writeHead(404, { "Content-Type":"application/json" });
         response.statusCode = 404; 
         response.end("Error 404: oopsie, page not found");
     }
