@@ -12,7 +12,6 @@ var requestHandler = function (request, response) {
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
-
     response.writeHead(200, { "Content-Type":"application/json" });
     
     var urlVar = request.url;
@@ -20,14 +19,10 @@ var requestHandler = function (request, response) {
     
     if(method == "GET" && urlVar == "/listings"){
         fs.readFile('listings.json', 'utf8', function(err, data){
-            // Display the file content
-            //console.log(data);
-            listingData += data;
+            //listingData += data;
         });
         console.log('readFile called');
         response.end(listingData);
-        //response.end(JSON.stringify(listingData));
-       // response.end("[insert json here]");
     }else{
         response.statusCode = 404; 
         response.end("Error 404: oopsie, page not found");
@@ -76,7 +71,7 @@ fs.readFile('listings.json', 'utf8', function (err, data) {
   
 
    //Save the data in the listingData variable already defined
-  
+      listingData += data;
 
   //Creates the server
     var server = http.createServer(requestHandler);
