@@ -23,9 +23,10 @@ var requestHandler = function (request, response) {
 
    console.log(request.body);*/
 
-    new URL(request.url, `http://${request.headers.host}`); 
+   // new URL(request.url, `http://${request.headers.host}`); 
     //console.log(URL);
     //console.log(URL);
+    console.log(request.baseUrl);
     
     response.end("ugh");
    
