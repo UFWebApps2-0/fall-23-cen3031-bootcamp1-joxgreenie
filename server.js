@@ -9,34 +9,30 @@ var listingData, server;
 
 
 var requestHandler = function (request, response) {
-    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
-   
   */
 
     response.writeHead(200, { "Content-Type":"application/json" });
     
     var urlVar = request.url;
-    console.log(urlVar);
-    
     var method = request.method;
-    console.log(method);
-
+    
     if(method == "GET" && urlVar == "/listings"){
+        fs.readFile('listings.json', 'utf8', function(err, data){
+            // Display the file content
+            console.log(data);
+        });
+        console.log('readFile called');
         response.end("[insert json here]");
     }else{
         response.statusCode = 404; 
-        response.end("oopsie");
+        response.end("Error 404: oopsie, page not found");
     }
-
-   // var path = request.path;
-   // console.log(path);
-    
+ 
    // const jsonContent = JSON.stringify(listingData);
    // response.end(jsonContent);
-    
-    //console.log(request);
+ 
   /*
     Your request handler should send listingData in the JSON format as a response if a GET request 
     is sent to the '/listings' path. Otherwise, it should send a 404 error. 
