@@ -2,6 +2,8 @@ var http = require('http'),
     fs = require('fs'), 
     port = 8080;
 
+const path = require('node:path');
+
 /* Global variables */
 var listingData, server;
 
