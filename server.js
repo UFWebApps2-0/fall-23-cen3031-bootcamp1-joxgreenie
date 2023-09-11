@@ -9,17 +9,28 @@ var listingData, server;
 
 
 var requestHandler = function (request, response) {
-    response.writeHead(200, { "Content-Type":"application/json" });
-    console.log(request.url);
+    
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
    
   */
+
+    response.writeHead(200, { "Content-Type":"application/json" });
+    
+    var urlVar = request.url;
+    console.log(urlVar);
+    
     var method = request.method;
     console.log(method);
 
-    var path = request.path;
-    console.log(path);
+    if(method == "GET" && urlVar == "/listings"){
+        response.end("[insert json here]");
+    }else{
+        response.status(404).send("oopsie");
+    }
+
+   // var path = request.path;
+   // console.log(path);
     
    // const jsonContent = JSON.stringify(listingData);
    // response.end(jsonContent);
@@ -44,7 +55,7 @@ var requestHandler = function (request, response) {
 
     */
 
-    response.end("ugh");
+    
 };
 
  
