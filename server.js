@@ -12,12 +12,13 @@ var requestHandler = function (request, response) {
   /*Investigate the request object. 
     You will need to use several of its properties: url and method
   */
-    response.writeHead(200, { "Content-Type":"application/json" });
+   
     
     var urlVar = request.url;
     var method = request.method;
     
     if(method == "GET" && urlVar == "/listings"){
+         response.writeHead(200, { "Content-Type":"application/json" });
         fs.readFile('listings.json', 'utf8', function(err, data){
             //listingData += data;
         });
