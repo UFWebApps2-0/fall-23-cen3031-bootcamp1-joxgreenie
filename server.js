@@ -15,10 +15,9 @@ var requestHandler = function (request, response) {
     var method = request.method;
     
     if(method == "GET" && urlVar == "/listings"){
-         response.writeHead(200, { "Content-Type":"application/json" });
+        response.writeHead(200, { "Content-Type":"application/json" });
         fs.readFile('listings.json', 'utf8', function(err, data){
         });
-        console.log('readFile called');
         response.end(listingData);
     }else{
         response.writeHead(404, { "Content-Type":"application/json" });
