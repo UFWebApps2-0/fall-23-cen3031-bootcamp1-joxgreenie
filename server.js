@@ -19,10 +19,10 @@ var requestHandler = function (request, response) {
     console.log(method);
 
     var path = request.path;
-    console.log(path);
+    console.log(pathname);
     
-    const jsonContent = JSON.stringify(listingData);
-    response.end(jsonContent);
+   // const jsonContent = JSON.stringify(listingData);
+   // response.end(jsonContent);
     
     //console.log(request);
   /*
