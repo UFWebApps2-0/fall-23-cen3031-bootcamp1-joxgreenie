@@ -17,7 +17,6 @@ var requestHandler = function (request, response) {
     if(method == "GET" && urlVar == "/listings"){
          response.writeHead(200, { "Content-Type":"application/json" });
         fs.readFile('listings.json', 'utf8', function(err, data){
-            //listingData += data;
         });
         console.log('readFile called');
         response.end(listingData);
@@ -77,12 +76,9 @@ fs.readFile('listings.json', 'utf8', function (err, data) {
   //Creates the server
     var server = http.createServer(requestHandler);
 
+//Start the server
     server.listen(port, function(){
          console.log('Server listening on: http://127.0.0.1:' + port);
     });
-   
-  
-  //Start the server
-
 
 });
