@@ -26,7 +26,8 @@ var requestHandler = function (request, response) {
     if(method == "GET" && urlVar == "/listings"){
         response.end("[insert json here]");
     }else{
-        response.status(404).send("oopsie");
+        response.statusCode = 404; 
+        response.end("oopsie");
     }
 
    // var path = request.path;
